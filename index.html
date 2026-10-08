@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>MedCare Pharmacy</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="logo">
+        💊 MedCare Pharmacy
+    </div>
+
+
+    <nav id="navbar">
+
+        <a href="#home">Home</a>
+
+        <a href="#products">Medicines</a>
+
+        <a href="#categories">Categories</a>
+
+        <a href="#about">About</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+
+    <button
+        class="cart-button"
+        onclick="toggleCart()"
+    >
+
+        🛒 Cart
+        (<span id="count">0</span>)
+
+    </button>
+
+
+    <button
+        class="menu-button"
+        onclick="toggleMenu()"
+    >
+        ☰
+    </button>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section
+    id="home"
+    class="hero"
+>
+
+    <div class="hero-content">
+
+        <span class="hero-small">
+            YOUR HEALTH, OUR PRIORITY
+        </span>
+
+
+        <h1>
+            Quality Medicines<br>
+            Delivered With Care
+        </h1>
+
+
+        <p>
+            Find medicines, healthcare products
+            and wellness essentials at MedCare Pharmacy.
+        </p>
+
+
+        <a
+            href="#products"
+            class="primary-btn"
+        >
+            Shop Medicines
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SEARCH
+========================= -->
+
+<section class="search-section">
+
+    <h2>
+        Find Your Medicine
+    </h2>
+
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search medicine..."
+            onkeyup="searchProducts()"
+        >
+
+
+        <button onclick="searchProducts()">
+            🔎 Search
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CATEGORIES
+========================= -->
+
+<section
+    id="categories"
+    class="section"
+>
+
+    <h2>
+        Medicine Categories
+    </h2>
+
+
+    <div class="category-grid">
+
+
+        <button
+            class="category-card"
+            onclick="filterCategory('Pain Relief')"
+        >
+
+            💊
+
+            <h3>
+                Pain Relief
+            </h3>
+
+            <p>
+                Pain & fever medicines
+            </p>
+
+        </button>
+
+
+
+        <button
+            class="category-card"
+            onclick="filterCategory('Cold & Flu')"
+        >
+
+            🤧
+
+            <h3>
+                Cold & Flu
+            </h3>
+
+            <p>
+                Cold, cough & flu care
+            </p>
+
+        </button>
+
+
+
+        <button
+            class="category-card"
+            onclick="filterCategory('Vitamins')"
+        >
+
+            🍊
+
+            <h3>
+                Vitamins
+            </h3>
+
+            <p>
+                Vitamins & supplements
+            </p>
+
+        </button>
+
+
+
+        <button
+            class="category-card"
+            onclick="filterCategory('First Aid')"
+        >
+
+            🩹
+
+            <h3>
+                First Aid
+            </h3>
+
+            <p>
+                First aid essentials
+            </p>
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section
+    id="products"
+    class="section products-section"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <span>
+                PHARMACY PRODUCTS
+            </span>
+
+            <h2>
+                Popular Medicines
+            </h2>
+
+        </div>
+
+
+        <button
+            class="show-all"
+            onclick="showAllProducts()"
+        >
+            Show All
+        </button>
+
+    </div>
+
+
+    <div
+        id="productGrid"
+        class="product-grid"
+    >
+
+        <!-- Products will be loaded by JavaScript -->
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+    id="about"
+    class="about-section"
+>
+
+    <div class="about-content">
+
+        <span>
+            ABOUT MEDCARE
+        </span>
+
+
+        <h2>
+            Your Trusted Healthcare Partner
+        </h2>
+
+
+        <p>
+            MedCare Pharmacy provides quality healthcare
+            products and medicines with a focus on
+            convenience, affordability and customer care.
+        </p>
+
+
+        <div class="about-features">
+
+            <div>
+                ✓ Quality Products
+            </div>
+
+            <div>
+                ✓ Affordable Prices
+            </div>
+
+            <div>
+                ✓ Fast Service
+            </div>
+
+            <div>
+                ✓ Customer Support
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+    id="contact"
+    class="section contact-section"
+>
+
+    <h2>
+        Contact Us
+    </h2>
+
+
+    <div class="contact-grid">
+
+
+        <div class="contact-info">
+
+            <h3>
+                Get In Touch
+            </h3>
+
+
+            <p>
+                📍 Gujranwala, Pakistan
+            </p>
+
+
+            <p>
+                📞 +92 300 1234567
+            </p>
+
+
+            <p>
+                ✉️ info@medcare.com
+            </p>
+
+
+            <p>
+                🕒 Mon - Sat: 9:00 AM - 10:00 PM
+            </p>
+
+        </div>
+
+
+
+        <form
+            id="contactForm"
+            class="contact-form"
+        >
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+            >
+
+
+            <textarea
+                id="message"
+                rows="5"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+
+            <button
+                type="submit"
+                class="primary-btn"
+            >
+                Send Message
+            </button>
+
+        </form>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CART SIDEBAR
+========================= -->
+
+<div
+    id="cartOverlay"
+    class="cart-overlay"
+    onclick="closeCart()"
+></div>
+
+
+<aside
+    id="cartSidebar"
+    class="cart-sidebar"
+>
+
+    <div class="cart-header">
+
+        <h2>
+            🛒 Your Cart
+        </h2>
+
+
+        <button
+            onclick="closeCart()"
+        >
+            ✕
+        </button>
+
+    </div>
+
+
+    <div
+        id="cartItems"
+        class="cart-items"
+    >
+
+        <p class="empty-cart">
+            Your cart is empty.
+        </p>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="cartTotal">
+                Rs. 0
+            </strong>
+
+        </div>
+
+
+        <button
+            class="checkout-btn"
+            onclick="checkout()"
+        >
+            Checkout
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <h3>
+                💊 MedCare Pharmacy
+            </h3>
+
+            <p>
+                Your health, our priority.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#products">
+                Medicines
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Important
+            </h4>
+
+            <p>
+                For prescription medicines,
+                consult a qualified healthcare professional.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 MedCare Pharmacy.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+
+<!-- JavaScript -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
